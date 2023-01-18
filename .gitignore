@@ -1,0 +1,17 @@
+node_modules/
+/vendor
+.DS_Store
+!.gitkeep
+/apps/web/app/tmp/cache
+/apps/web/app/tmp/logs
+error.log
+debug_kit.sqlite
+_develop/src/pug/second/detail.pug
+apps/web/app/bin
+apps/web/app/logs
+apps/web/app/plugins
+apps/web/app/tmp
+composer.lock
+apps/web/app/config/.env
+public_html/upload
+apps/web/app/config/Migrations

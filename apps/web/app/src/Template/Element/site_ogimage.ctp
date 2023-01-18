@@ -1,0 +1,1 @@
+<?= $this->Url->build('/og.png'); ?>

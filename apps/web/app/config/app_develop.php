@@ -55,7 +55,7 @@ return [
             'locales' => [APP . 'Locale' . DS],
         ],
         'defaultTimezone' => 'UTC',
-        'headTitle' => 'Bui Tuan Anh'
+        'headTitle' => "MER's House"
     ],
 
     /**

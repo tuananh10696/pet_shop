@@ -1,11 +1,12 @@
 <?php if ($c['attaches']['image']['0']) : ?>
-	<div class="about-img">
-		<?php if ($c['content'] != '') : ?>
-			<a href="<?= h($c['content']) ?>" target="<?= $c['option_value'] ?>">
-			<?php endif; ?>
-			<img src="<?= $c['attaches']['image']['0'] ?>" alt="">
-			<?php if ($c['content'] != '') : ?>
-			</a>
+
+	<?php if ($c['content'] != '') : ?>
+		<a href="<?= h($c['content']) ?>" target="<?= $c['option_value'] ?>">
 		<?php endif; ?>
-	</div>
+		<img class="img-fluid w-100 mb-4" src="<?= $c['attaches']['image']['0'] ?>" alt="Image">
+		<?php if ($c['content'] != '') : ?>
+		</a>
+	<?php endif; ?>
+
+
 <?php endif; ?>

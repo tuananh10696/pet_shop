@@ -66,7 +66,7 @@ class AppController extends Controller
         $this->is_preview = $this->isUserLogin() && $this->request->getQuery('preview') == 'on';
 
         $this->set('__description__', $this->head_description);
-        $this->set('body_class', '');
+        $this->set('header_class', '');
         $this->getCategory();
         /*
          * Enable the following components for recommended CakePHP security settings.

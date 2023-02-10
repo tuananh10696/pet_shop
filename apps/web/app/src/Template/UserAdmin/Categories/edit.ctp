@@ -5,25 +5,25 @@ use Cake\Utility\Inflector; ?>
 <style>
 	label[for="cate-color-0"] {
 		background-color: #136dcb !important;
-		border-radius : 20px
+		border-radius: 20px
 	}
 
 	label[for="cate-color-1"] {
 		background-color: #f39c12 !important;
 		margin-left: 50px;
-		border-radius : 20px
+		border-radius: 20px
 	}
 
 	label[for="cate-color-2"] {
 		background-color: #20c997 !important;
 		margin-left: 50px;
-		border-radius : 20px
+		border-radius: 20px
 	}
 
 	label[for="cate-color-3"] {
 		background-color: #ea5664 !important;
 		margin-left: 50px;
-		border-radius : 20px
+		border-radius: 20px
 	}
 </style>
 <?php $this->end(); ?>
@@ -61,21 +61,8 @@ use Cake\Utility\Inflector; ?>
 
 	<?= $this->element('edit_form/item-start', ['title' => 'カテゴリ名', 'required' => true]); ?>
 	<?= $this->Form->input('name', array('type' => 'text', 'maxlength' => 40, 'class' => 'form-control')); ?>
-	<br><span>※40文字以内で入力してください</span>
+	<span>※40文字以内で入力してください</span>
 	<?= $this->element('edit_form/item-end'); ?>
-
-	<?php $color = ['ブルー', 'オレンジ ', 'グリーン ', 'ピンク '] ?>
-	<?= $this->element('edit_form/item-start', ['title' => '色']); ?>
-	<?= $this->Form->control('cate_color', [
-		'type' => 'radio', 'options' => $color, 'hiddenField' => false,
-		'label' => false,
-		'templates' => [
-			'radioWrapper' => '<div class="radio icheck-turquoise d-inline mr-2">{{label}}</div>',
-		],
-	]); ?>
-
-	<?= $this->element('edit_form/item-end'); ?>
-
 	<?= $this->element('edit_form/item-start', ['title' => '有効/無効']); ?>
 	<?= $this->element('edit_form/item-status'); ?>
 	<?= $this->element('edit_form/item-end'); ?>

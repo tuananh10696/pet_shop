@@ -203,8 +203,8 @@ if (isset($case_info))
 		<?php $_title = $this->Common->infoItemTitle($page_config->id, PageConfigItem::TYPE_MAIN, 'notes', 'title', $page_config->slug == 'staff' ? '見出し' : '一覧概要'); ?>
 		<?php $_sub_tilte = $this->Common->infoItemTitle($page_config->id, PageConfigItem::TYPE_MAIN, 'notes', 'sub_title', '<div>(一覧と詳細に表示)</div>'); ?>
 		<?= $this->element('edit_form/item-start', ['title' => $_title, 'sub_title' => $_sub_tilte, 'required' => true]); ?>
-		<?= $this->Form->input('notes', ['type' => 'textarea', 'maxlength' => 500, 'class' => 'form-control']); ?>
-		<div class="attention">※500文字以内で入力してください</div>
+		<?= $this->Form->input('notes', ['type' => 'textarea', 'maxlength' => 200, 'class' => 'form-control']); ?>
+		<div class="attention">※200文字以内で入力してください</div>
 		<?= $this->element('edit_form/item-end'); ?>
 	<?php endif; ?>
 
@@ -379,14 +379,15 @@ if (isset($case_info))
 	var form_file_size = 0;
 	var page_config_id = <?= $page_config->id; ?>;
 	var is_old_editor = <?= ($editor_old == 1 ? 1 : 0); ?>;
-	jQuery.datetimepicker.setLocale('ja');
+	jQuery.datetimepicker.setLocale('vi-VN');
 	jQuery('.datetimepicker').datetimepicker({
 		format: 'Y/m/d',
 		timepicker: false,
-		lang: 'ja',
+		lang: 'vi-VN',
 		scrollMonth: false,
 		scrollInput: false
 	});
+	
 
 	function checkFileType(e) {
 

@@ -2,9 +2,12 @@
 
 namespace App\Form;
 
+use Cake\Mailer\Email;
 use Cake\Form\Form;
 use Cake\Form\Schema;
 use Cake\Validation\Validator;
+use Cake\Mailer\TransportFactory;
+use App\Utils\CustomUtility;
 
 class ContactForm extends AppForm
 {
@@ -130,5 +133,50 @@ class ContactForm extends AppForm
     public function getUserSubject()
     {
         return self::MAIL_SUBJECT_USER;
+    }
+
+    public function _sendmail($form)
+    {
+        // 文字化け対応
+        // $form['content'] = CustomUtility::_preventGarbledCharacters($form['content']);
+
+        $to = ['bui.tuanAnh@caters.co.jp'];
+        $from = ['bui.tuanAnh@caters.co.jp' => "MER's HOUSE - Tiệm thú cưng"];
+
+        // $test_dev_local_server = (strpos($_SERVER["HTTP_HOST"], 'test') !== false ||
+        //     strpos($_SERVER["HTTP_HOST"], 'caters') !== false ||
+        //     strpos($_SERVER["HTTP_HOST"], 'loca') !== false ||
+        //     strpos($_SERVER["HTTP_HOST"], 'localhost') !== false);
+
+        // $is_honban = !Configure::read('debug') && !$test_dev_local_server;
+
+        // if ($is_honban) {
+        //     // 本番の場合
+        //     $to = ['bui.tuanAnh@caters.co.jp'];
+        //     $from = ['bui.tuanAnh@caters.co.jp' => "MER's House"];
+        // }
+
+        $info_email = new Email();
+        $info_email
+            ->template('admin_contact')
+            ->emailFormat('text')
+            ->setViewVars(['value' => $form])
+            ->setFrom($from)
+            ->setTo($to)
+            ->setSubject("MER's HOUSE - Tiệm thú cưng")
+            ->send();
+
+
+        $thank_email = new Email();
+        $thank_email
+            ->template('contact')
+            ->emailFormat('text')
+            ->setViewVars(['value' => $form])
+            ->setFrom($from)
+            ->setTo($form['email'])
+            ->setSubject("MER's HOUSE - Tiệm thú cưng")
+            ->send();
+
+        return true;
     }
 }

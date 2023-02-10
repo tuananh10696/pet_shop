@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Cake\Event\Event;
+use App\Form\ContactForm;
 
 class HomesController extends AppController
 {
@@ -18,40 +19,34 @@ class HomesController extends AppController
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
-        $this->slug = 'news';
+        $this->slug = 'blog';
+        $this->set('header_class', 'home');
     }
 
 
     public function index()
     {
-        $this->setList();
-        $this->setHeadTitle('Share Life Style Pages');
-        $this->set('__description__', 'Trang chia sẻ thông tin Nhật Bản');
+        $options = [
+            'limit' => 3,
+            'paginate' => true
+        ];
+        $this->set('infos', $this->Cms->findAll($this->slug, $options));
 
-        $category_id = $this->request->getQuery('category_id');
-        $this->set('category_id', $category_id ?? 0);
-
-        // $options = [
-        //     ''
-        // ];
+        $param = $this->request->getQueryParams();
+        extract($param);
+        if (isset($param) && !empty($param)) {
+            $contact = new ContactForm();
+            $contact->_sendmail($param);
+            $this->redirect(['action' => 'thanks']);
+        };
     }
 
-    public function setList()
+    public function thanks()
     {
-        $list = [];
-
-        $list['category'] = $this->loadModel('Categories')
-            ->find('all')
-            ->where([
-                'Categories.status' => 'publish',
-                'PageConfigs.slug' => $this->slug
-            ])
-            ->contain('PageConfigs')
-            ->order('Categories.position ASC')
-            ->toArray();
-
-
-        if (!empty($list)) $this->set(array_keys($list), $list);
-        return $list;
+        $options = [
+            'limit' => 6,
+            'paginate' => true
+        ];
+        $this->set('infos', $this->Cms->findAll($this->slug, $options));
     }
 }

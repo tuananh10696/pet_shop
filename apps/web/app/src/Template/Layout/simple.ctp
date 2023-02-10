@@ -1,273 +1,216 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title><?= $__title__ ?></title>
     <meta name="description" content="<?= $__description__ ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
-    
-    <!-- CSS here -->
-    <link rel="stylesheet" data-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" data-optimized-fonts="true">
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/assets/css/ticker-style.css">
-    <link rel="stylesheet" href="/assets/css/flaticon.css">
-    <link rel="stylesheet" href="/assets/css/slicknav.css">
-    <link rel="stylesheet" href="/assets/css/animate.min.css">
-    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="/assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="/assets/css/themify-icons.css">
-    <link rel="stylesheet" href="/assets/css/slick.css">
-    <link rel="stylesheet" href="/assets/css/nice-select.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <?= $this->fetch('css') ?>
 
+    <!-- Favicon -->
+    <link href="/img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/css/style.css" rel="stylesheet">
+    <?= $this->fetch('css') ?>
 </head>
 
 <body>
-    <!-- Preloader Start -->
-    <!-- <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/logo.png" alt="">
+    <!-- Topbar Start -->
+    <div class="container-fluid">
+        <div class="row bg-secondary py-2 px-lg-5">
+            <div class="col-lg-6 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <a class="text-white px-3" href="https://www.facebook.com/profile.php?id=100087815199195">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="text-white px-3" href="https://www.facebook.com/profile.php?id=100087815199195">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a class="text-white px-3" href="https://www.facebook.com/profile.php?id=100087815199195">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a class="text-white px-3" href="https://www.facebook.com/profile.php?id=100087815199195">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="text-white pl-3" href="https://www.facebook.com/profile.php?id=100087815199195">
+                        <i class="fab fa-youtube"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </div> -->
-    <!-- Preloader Start -->
-    <header>
-        <!-- Header Start -->
-        <div class="header-area">
-            <div class="main-header ">
-                <div class="header-mid gray-bg">
-                    <div class="container">
-                        <div class="row d-flex align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-3 col-lg-3 col-md-3 d-none d-md-block">
-                                <div class="logo">
-                                    <a href=""><img src="/assets/img/logo/logo.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-xl-9 col-lg-9 col-md-9">
-                                <div class="header-banner f-right ">
-                                    <img src="/assets/img/gallery/header_card.png" alt="">
-                                </div>
-                            </div>
-                        </div>
+        <div class="row py-3 px-lg-5">
+            <div class="col-lg-4">
+                <a href="/" class="navbar-brand d-none d-lg-block">
+                    <h1 class="m-0 display-5 text-capitalize"><span class="text-primary">MER's</span> House</h1>
+                </a>
+            </div>
+            <div class="col-lg-8 text-center text-lg-right">
+                <div class="d-inline-flex align-items-center">
+                    <div class="d-inline-flex flex-column text-center pr-3 border-right">
+                        <h6>Opening Hours</h6>
+                        <p class="m-0">8.00AM - 9.00PM</p>
+                    </div>
+                    <div class="d-inline-flex flex-column text-center pr-3 border-right">
+                        <h6>Address</h6>
+                        <p class="m-0">　246 Kim Mã - Ba Đình</p>
+                    </div>
+                    <div class="d-inline-flex flex-column text-center pl-3">
+                        <h6>Call Us</h6>
+                        <p class="m-0">083 696 3883</p>
                     </div>
                 </div>
-                <div class="header-bottom header-sticky">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-xl-8 col-lg-8 col-md-12 header-flex">
-                                <!-- sticky -->
-                                <div class="sticky-logo">
-                                    <a href=""><img src="/assets/img/logo/logo.png" alt=""></a>
-                                </div>
-                                <!-- Main-menu -->
-                                <div class="main-menu d-none d-md-block">
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
 
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a href="/">Home</a></li>
-                                            <li><a href="about.html">about</a></li>
-                                            <li><a href="/category">Category</a>
-                                                <ul class="submenu">
-                                                    <?php foreach ($category as $news_category) : ?>
-                                                        <li><a href="/category?category_id=<?= $news_category->id ?>"><?= h($news_category->name) ?></a></li>
-                                                    <?php endforeach; ?>
-                                                </ul>
-                                            </li>
-                                            <li><a href="latest_news.html">Latest News</a></li>
-                                            <li><a href="#">Pages</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog_details.html">Blog Details</a></li>
-                                                    <li><a href="elements.html">Element</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-4">
-                                <div class="header-right f-right d-none d-lg-block">
-                                    <!-- Heder social -->
-                                    <ul class="header-social">
-                                        <li><a href="https://www.fb.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                        <li> <a href="#"><i class="fab fa-youtube"></i></a></li>
-                                    </ul>
-                                    <!-- Search Nav -->
-                                    <div class="nav-search search-switch">
-                                        <i class="fa fa-search"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-md-none"></div>
-                            </div>
+
+    <!-- Navbar Start -->
+    <div class="container-fluid p-0">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
+            <a href="/" class="navbar-brand d-block d-lg-none">
+                <h1 class="m-0 display-5 text-capitalize font-italic text-white"><span class="text-primary">MER's</span>HOUSE</h1>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                <div class="navbar-nav mr-auto py-0">
+                    <a href="/" class="nav-item nav-link <?= $header_class == 'home' ? 'active' : '' ?>">Home</a>
+                    <a href="about.html" class="nav-item nav-link <?= $header_class == 'about' ? 'active' : '' ?>">About</a>
+                    <a href="service.html" class="nav-item nav-link <?= $header_class == 'service' ? 'active' : '' ?>">Service</a>
+                    <a href="price.html" class="nav-item nav-link <?= $header_class == 'price' ? 'active' : '' ?>">Price</a>
+                    <a href="/blog" class="nav-item nav-link <?= $header_class == 'blog' ? 'active' : '' ?>">Blog</a>
+                    <!-- <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                            <a href="single.html" class="dropdown-item">Blog Detail</a>
                         </div>
-                    </div>
+                    </div> -->
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
                 </div>
+                <a href="/#_booking" class="btn btn-lg btn-primary px-3 d-none d-lg-block" id="booking">Booking</a>
             </div>
-        </div>
-        <!-- Header End -->
-    </header>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
 
 
     <?= $this->fetch('content'); ?>
 
-    <footer>
-        <!-- Footer Start-->
-        <div class="footer-main footer-bg">
-            <div class="footer-area footer-padding">
-                <div class="container">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-xl-3 col-lg-3 col-md-5 col-sm-8">
-                            <div class="single-footer-caption mb-50">
-                                <div class="single-footer-caption mb-30">
-                                    <!-- logo -->
-                                    <div class="footer-logo">
-                                        <a href=""><img src="/assets/img/logo/logo2_footer.png" alt=""></a>
-                                    </div>
-                                    <div class="footer-tittle">
-                                        <div class="footer-pera">
-                                            <p class="info1">Lorem ipsum dolor sit amet, nsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                                            <p class="info2">198 West 21th Street, Suite 721 New York,NY 10010</p>
-                                            <p class="info2">Phone: +95 (0) 123 456 789 Cell: +95 (0) 123 456 789</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
+        <div class="row pt-5">
+            <div class="col-lg-4 col-md-12 mb-5">
+                <h1 class="m-0 display-5 text-capitalize"><span class="text-primary">MER's</span>HOUSE</h1>
+                <p class="m-0">Ipsum amet sed vero et lorem stet eos ut, labore sed sed stet sea est ipsum ut. Volup amet ea sanct ipsum, dolore vero lorem no duo eirmod. Eirmod amet ipsum no ipsum lorem clita ut. Ut sed sit lorem ea lorem sed, amet stet sit sea ea diam tempor kasd kasd. Diam nonumy etsit tempor ut sed diam sed et ea</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Get In Touch</h5>
+                        <p><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
+                        <p><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
+                        <p><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+                        <div class="d-flex justify-content-start mt-4">
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 36px; height: 36px;" href="#"><i class="fab fa-instagram"></i></a>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-5 col-sm-7">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Popular post</h4>
-                                </div>
-                                <!-- Popular post -->
-                                <div class="whats-right-single mb-20">
-                                    <div class="whats-right-img">
-                                        <img src="/assets/img/gallery/footer_post1.png" alt="">
-                                    </div>
-                                    <div class="whats-right-cap">
-                                        <h4><a href="latest_news.html">Scarlett’s disappointment at latest accolade</a></h4>
-                                        <p>Jhon | 2 hours ago</p>
-                                    </div>
-                                </div>
-                                <!-- Popular post -->
-                                <div class="whats-right-single mb-20">
-                                    <div class="whats-right-img">
-                                        <img src="/assets/img/gallery/footer_post2.png" alt="">
-                                    </div>
-                                    <div class="whats-right-cap">
-                                        <h4><a href="latest_news.html">Scarlett’s disappointment at latest accolade</a></h4>
-                                        <p>Jhon | 2 hours ago</p>
-                                    </div>
-                                </div>
-                                <!-- Popular post -->
-                                <div class="whats-right-single mb-20">
-                                    <div class="whats-right-img">
-                                        <img src="/assets/img/gallery/footer_post3.png" alt="">
-                                    </div>
-                                    <div class="whats-right-cap">
-                                        <h4><a href="latest_news.html">Scarlett’s disappointment at latest accolade</a></h4>
-                                        <p>Jhon | 2 hours ago</p>
-                                    </div>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Popular Links</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                            <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Team</a>
+                            <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
                         </div>
-                        <div class="col-xl-3 col-lg-3 col-md-5 col-sm-7">
-                            <div class="single-footer-caption mb-50">
-                                <div class="banner">
-                                    <img src="/assets/img/gallery/body_card4.png" alt="">
-                                </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-primary mb-4">Newsletter</h5>
+                        <form action="">
+                            <div class="form-group">
+                                <input type="text" class="form-control border-0" placeholder="Your Name" required="required" />
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control border-0" placeholder="Your Email" required="required" />
+                            </div>
+                            <div>
+                                <button class="btn btn-lg btn-primary btn-block border-0" type="submit">Submit Now</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <!-- footer-bottom aera -->
-            <div class="footer-bottom-area footer-bg">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-xl-12 ">
-                                <div class="footer-copy-right text-center">
-                                    <p>
-                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                        Copyright &copy;<script>
-                                            document.write(new Date().getFullYear());
-                                        </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End-->
-    </footer>
-    <!-- Search model Begin -->
-    <div class="search-model-box">
-        <div class="d-flex align-items-center h-100 justify-content-center">
-            <div class="search-close-btn">+</div>
-            <form class="search-model-form">
-                <input type="text" id="search-input" placeholder="Searching key.....">
-            </form>
         </div>
     </div>
-    <!-- Search model end -->
+    <div class="container-fluid text-white py-4 px-sm-3 px-md-5" style="background: #111111;">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-left mb-3 mb-md-0">
+                <p class="m-0 text-white">
+                    &copy; <a class="text-white font-weight-bold" href="#">Your Site Name</a>. All Rights Reserved. Designed by
+                    <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            </div>
+            <div class="col-md-6 text-center text-md-right">
+                <ul class="nav d-inline-flex">
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Terms</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">FAQs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white py-0" href="#">Help</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
 
-    <!-- JS here -->
 
-    <script src="/assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="/assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="/assets/js/popper.min.js"></script>
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="/assets/js/jquery.slicknav.min.js"></script>
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="/assets/js/owl.carousel.min.js"></script>
-    <script src="/assets/js/slick.min.js"></script>
-    <!-- Date Picker -->
-    <script src="/assets/js/gijgo.min.js"></script>
-    <!-- One Page, Animated-HeadLin -->
-    <script src="/assets/js/wow.min.js"></script>
-    <script src="/assets/js/animated.headline.js"></script>
-    <script src="/assets/js/jquery.magnific-popup.js"></script>
 
-    <!-- Scrollup, nice-select, sticky -->
-    <script src="/assets/js/jquery.scrollUp.min.js"></script>
-    <script src="/assets/js/jquery.nice-select.min.js"></script>
-    <script src="/assets/js/jquery.sticky.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/easing/easing.min.js"></script>
+    <script src="/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- contact js -->
-    <script src="/assets/js/contact.js"></script>
-    <script src="/assets/js/jquery.form.js"></script>
-    <script src="/assets/js/jquery.validate.min.js"></script>
-    <script src="/assets/js/mail-script.js"></script>
-    <script src="/assets/js/jquery.ajaxchimp.min.js"></script>
+    <!-- Contact Javascript File -->
+    <script src="/mail/jqBootstrapValidation.min.js"></script>
+    <script src="/mail/contact.js"></script>
 
-    <!-- Jquery Plugins, main Jquery -->
-    <script src="/assets/js/plugins.js"></script>
-    <script src="/assets/js/main.js"></script>
-
+    <!-- Template Javascript -->
+    <script src="/js/main.js"></script>
     <?= $this->fetch('script') ?>
 
 </body>
